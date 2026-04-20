@@ -1,3 +1,4 @@
+require("node:dns/promises").setServers(["1.1.1.1", "8.8.8.8"])
 const express = require("express");
 const dotenv = require("dotenv");
 const cors = require("cors");
@@ -16,6 +17,9 @@ app.get("/", (req, res) => {
 
 const authRoutes = require("./routes/authRoutes");
 app.use("/api/auth", authRoutes);
+
+const postRoutes = require("./routes/postRoutes");
+app.use("/api/posts", postRoutes);
 
 const PORT = process.env.PORT || 5001;
 
