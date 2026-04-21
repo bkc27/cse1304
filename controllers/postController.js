@@ -29,4 +29,13 @@ const createPost = async (req, res) => {
     }
 };
 
+const getAllPost = async () => { };
+
+const getSinglePost = () => { };
+
+const updatePost = () => { };
+
+const deletePost = () => { };
+
+
 module.exports = { createPost };
